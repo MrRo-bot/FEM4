@@ -46,7 +46,7 @@ hover over social media icons changing color
 - CSS custom properties,
 - Flexbox,
 - Mobile-first workflow,
-- ::before ::after pseudo-classes and :hover pseudo-element.
+- Pseudo-classes and pseudo-element.
 
 ### What I learned
 
