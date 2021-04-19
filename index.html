@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>
+      Frontend Mentor | Huddle landing page with single introductory section
+    </title>
+
+    <style>
+      /*Basic Styles and normalised code*/
+
+      @import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;600&display=swap");
+
+      *,
+      ::before,
+      ::after {
+        box-sizing: border-box;
+      }
+
+      :root {
+        font-family: "Open Sans", sans-serif;
+        font-family: "Poppins", sans-serif;
+
+        font-size: 16px;
+
+        --Violet: hsl(257, 40%, 49%);
+        --Soft-Magenta: rgb(232, 130, 232);
+        --white: hsl(0, 0%, 100%);
+      }
+
+      body,
+      h1,
+      p {
+        margin: 0;
+        padding: 0;
+      }
+
+      /*===================main==================*/
+      main {
+        display: flex;
+        flex-direction: column;
+        gap: 3em;
+        color: var(--white);
+        padding: 2em 2em 0 2em;
+      }
+
+      .illustration {
+        padding: 0 0.5em;
+        margin: 0 auto;
+      }
+
+      .header {
+        text-align: left;
+        max-width: 8em;
+        margin-bottom: 3em;
+      }
+
+      .mockup {
+        display: block;
+        width: 80vw;
+      }
+
+      .details h1 {
+        font-family: "Poppins", sans-serif;
+        font-weight: 600;
+        font-size: 1.5rem;
+        text-align: center;
+      }
+
+      .details p {
+        text-align: center;
+        opacity: 0.75;
+        margin: 1.25em 0;
+      }
+
+      .button {
+        font-family: "open sans", sans-serif;
+        text-align: center;
+        color: var(--Violet);
+        font-size: 0.8rem;
+        background: var(--white);
+        box-shadow: 0px 5px 10px 1px hsla(0, 0%, 0%, 0.4);
+        border-radius: 30px;
+        width: 17em;
+        margin: 1.2em auto;
+        padding: 1em 0;
+      }
+
+      .button:hover,
+      .button:focus {
+        cursor: pointer;
+        background: var(--Soft-Magenta);
+        color: var(--white);
+        transition: all 0.4s ease-in-out;
+      }
+
+      .socials {
+        display: flex;
+        justify-content: space-between;
+        width: 6.5em;
+        margin: 4em auto;
+      }
+
+      .socials > div {
+        border: 1px solid var(--white);
+        border-radius: 50%;
+        width: 1.7em;
+        height: 1.7em;
+        position: relative;
+      }
+
+      .socials > div:hover,
+      .socials > div:hover {
+        border: 1px solid var(--Soft-Magenta);
+        transition: all 0.2s ease;
+        cursor: pointer;
+      }
+
+      .facebook > div,
+      .twitter > div,
+      .instagram > div {
+        width: 0.9em;
+        height: 0.9em;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        transition: all 0.7s ease-in-out;
+      }
+
+      .facebook > div {
+        background: url("images/facebook.png") no-repeat center center;
+        background-size: cover;
+      }
+
+      .facebook > div:hover {
+        background: url("images/facebook-pink.png") no-repeat center center;
+        background-size: cover;
+      }
+
+      .twitter > div {
+        background: url("images/twitter.png") no-repeat center center;
+        background-size: cover;
+      }
+
+      .twitter > div:hover {
+        background: url("images/twitter-pink.png") no-repeat center center;
+        background-size: cover;
+      }
+
+      .instagram > div {
+        background: url("images/instagram.png") no-repeat center center;
+        background-size: cover;
+      }
+
+      .instagram > div:hover {
+        background: url("images/instagram-pink.png") no-repeat center center;
+        background-size: cover;
+      }
+
+      /*===================main==================*/
+
+      /*==================footer==================*/
+
+      .license {
+        color: var(--white);
+        text-align: center;
+        font-size: 0.8rem;
+      }
+
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+        color: var(--white);
+      }
+
+      .attribution a {
+        color: var(--Soft-Magenta);
+      }
+      /*=================footer=================*/
+
+      /*==============media queries=============*/
+
+      @media screen and (max-width: 1000px) {
+        body {
+          background: var(--Violet) url("images/bg-mobile.svg") no-repeat top;
+          background-size: contain;
+        }
+      }
+
+      @media screen and (min-width: 1000px) {
+        body {
+          background: var(--Violet) url("images/bg-desktop.svg") no-repeat;
+          background-size: contain;
+        }
+
+        main {
+          flex-direction: row;
+          align-items: center;
+          gap: 2em;
+          max-width: 100%;
+          height: 100vh;
+        }
+
+        main div {
+          width: 100%;
+        }
+
+        .mockup {
+          width: 50vw;
+        }
+
+        .details {
+          align-self: center;
+        }
+
+        .details h1,
+        .details p {
+          text-align: left;
+        }
+
+        .details h1 {
+          padding-top: 2em;
+          padding-right: 3em;
+          font-size: 2.5rem;
+        }
+
+        .details p {
+          padding-right: 6em;
+        }
+
+        .button {
+          margin-left: 0;
+          width: 13em;
+        }
+
+        .socials {
+          margin-right: 3em;
+          margin-bottom: 2em;
+          width: 8em;
+        }
+
+        .socials > div {
+          width: 2em;
+          height: 2em;
+        }
+
+        .facebook > div,
+        .twitter > div,
+        .instagram > div {
+          width: 1.2em;
+          height: 1.2em;
+        }
+      }
+
+      /*==============media queries=============*/
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="illustration">
+        <img class="header" src="images/logo.svg" alt="Huddle - Company Logo" />
+        <img
+          class="mockup"
+          src="images/illustration-mockups.svg"
+          alt="Responsive Design mockup svg"
+        />
+      </div>
+      <div class="details">
+        <h1>Build The Community Your Fans Will Love</h1>
+        <p>
+          Huddle re-imagines the way we build communities. You have a voice, but
+          so does your audience. Create connections with your users as you
+          engage in genuine discussion.
+        </p>
+        <div class="button">Register</div>
+        <div class="socials">
+          <div class="facebook"><div></div></div>
+          <div class="twitter"><div></div></div>
+          <div class="instagram"><div></div></div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div class="license">
+        <div>
+          Icons made by
+          <a
+            href="https://www.flaticon.com/authors/pixel-perfect"
+            title="Pixel perfect"
+            >Pixel perfect</a
+          >
+          from
+          <a href="https://www.flaticon.com/" title="Flaticon"
+            >www.flaticon.com</a
+          >
+        </div>
+      </div>
+      <p class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by
+        <a href="https://www.frontendmentor.io/MrRo-bot">Mr.Robot</a>.
+      </p>
+    </footer>
+  </body>
+</html>
