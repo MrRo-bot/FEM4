@@ -26,8 +26,8 @@ hover over social media icons changing color
 
 ### Links
 
-- GITHUB REPO: [https://github.com/MrRo-bot/FEM4]
-- Solution URL: [https://codepen.io/Mr-RO13OT/pen/oNBPZVy]
+- GITHUB REPO: [https://github.com/MrRo-bot/huddle-landing-page-with-single-introductory-section]
+- Solution URL: [https://codepen.io/Mr-RO13OT/full/oNBPZVy]
 
 ## My process
 
