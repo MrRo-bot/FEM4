@@ -14,7 +14,7 @@
 
 ## Overview
 
-Creating a huddle landing page
+Created NEWBIE huddle landing page
 
 ### The challenge
 
